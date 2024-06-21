@@ -9,10 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chart.js": "^4.4.3",
+    "node-sass": "^9.0.0",
+    "sass": "^1.77.6",
     "vue": "^3.4.29"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vue-tsc": "^2.0.21"

@@ -1,0 +1,29 @@
+// Background colors
+$--primary-back: #000000;
+$--secondary-back: #1C1C1E;
+$--tertiary-back: #2C2C2E;
+$--quaternary-back: rgb(91, 91, 95, .2);
+
+// Text colors
+$--primary-text: #FFFFFF;
+$--secondary-text: rgb(235, 235, 245, .6);
+$--tertiary-text: rgb(235, 235, 245, .3);
+
+// Icon colors
+$--primary-icons: #5B5B5F;
+
+// Accent colors
+$--red: #FF453A;
+$--pink: #EE6E84;
+$--blue: #0A84FF;
+$--dark-blue: #173C61;
+$--green: #4CD964;
+$--yellow: #FFCC00;
+$--purple: #5856D6;
+$--teal-blue: #5AC8FA;
+$--orange: #FF9500;
+
+// Skeleton colors
+$--light-skeleton: #353535;
+$--dark-skeleton: #2C2C2C;
+$--linear-skeleton: linear-gradient(to right, $--dark-skeleton 25%, $--light-skeleton 50%, $--dark-skeleton 100%);

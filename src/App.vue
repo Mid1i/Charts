@@ -1,30 +1,40 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+  import TechnologyList from "@/components/TechnologyList.vue";
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="container">
+    <h1 class="container__title">Задание для прохождения практики</h1>
+    <p class="container__text"><span>Задача:</span> Реализовать инструмент для построения графиков, в котором при отображении тултипа точки, будут скрываться ближайшие точки.</p>
+    <TechnologyList/>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style scoped lang="scss">
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 100px;
+
+    height: 100%;
+    width: 100%;
+
+    &__title {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      font-size: 16px;
+
+      max-width: 550px;
+      margin-bottom: 30px;
+
+      & span {
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    }
+  }
 </style>
