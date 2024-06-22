@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import TechnologyList from "@/components/TechnologyList.vue";
+  import Chart from "@/components/Chart.vue";
 </script>
 
 <template>
@@ -7,6 +8,7 @@
     <h1 class="container__title">Задание для прохождения практики</h1>
     <p class="container__text"><span>Задача:</span> Реализовать инструмент для построения графиков, в котором при отображении тултипа точки, будут скрываться ближайшие точки.</p>
     <TechnologyList/>
+    <Chart/>
   </div>
 </template>
 

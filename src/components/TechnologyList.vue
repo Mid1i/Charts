@@ -49,5 +49,7 @@
 	.list {
 		display: flex;
 		gap: 30px;
+
+		margin-bottom: 50px;
 	}
 </style>
