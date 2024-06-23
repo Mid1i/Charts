@@ -1,4 +1,4 @@
-import { AnimationEvent, Chart, ChartEvent, ChartConfiguration, ActiveElement } from "chart.js";
+import { ChartConfiguration } from "chart.js";
 
 
 export const chartConfig = (data: number[], data2: number[], labels: string[]): ChartConfiguration => ({
@@ -88,36 +88,9 @@ export const chartConfig = (data: number[], data2: number[], labels: string[]): 
 				}
 			}
 		},
-		animation: {
-			onComplete: (chart: AnimationEvent): void => onDrawDatalabales(chart),
-			// onProgress: (chart: AnimationEvent): void => onDrawDatalabales(chart)
-		},
-		onHover: (event: ChartEvent, elements: ActiveElement[], chart: Chart) => {
-			// console.log(1);
-			const ctx = chart.ctx;
+		hover: {
+			mode: "nearest",
+			intersect: true
 		}
 	}
 });
-
-
-const onDrawDatalabales = (chart: AnimationEvent): void => {
-	const ctx = chart.chart.ctx;
-	
-	ctx.font = "500 14px Manrope";
-	ctx.fillStyle = "white";
-
-	ctx.textAlign = "center";
-	ctx.textBaseline = "bottom";
-
-	chart.chart.config.data.datasets.forEach((dataset, index) => {
-		const meta = chart.chart.getDatasetMeta(index);
-
-		meta.data.forEach((item, i) => {
-			if (i % 2 === 0) {
-				const data = dataset.data[i];
-
-				i === 0 ? ctx.fillText(String(data), item.x + 15, item.y - 10) : ctx.fillText(String(data), item.x, item.y - 10);
-			}
-		});
-	});
-}
