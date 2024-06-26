@@ -31,8 +31,8 @@
 		transition: all 0.2s ease-in-out;
 
 		&__icon {
-			height: 70px;
-			width: 70px;
+			height: 50px;
+			width: 50px;
 		}
 	}
 

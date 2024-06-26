@@ -49,7 +49,7 @@
 
 	.list {
 		display: flex;
-		gap: 30px;
+		gap: 20px;
 
 		margin-bottom: 30px;
 	}

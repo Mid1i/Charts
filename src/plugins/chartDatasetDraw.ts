@@ -30,5 +30,9 @@ export const onDrawDatasets = (chart: Chart, hoveredPoint: InteractionItem | nul
 
 const onDrawPoint = (ctx: CanvasRenderingContext2D, data: string, point: Element, index: number, isActive: boolean = false): void => {
 	ctx.font = `${isActive ? "600 20px" : "500 14px"} Manrope`;
-	ctx.fillText(String(data), index === 0 ? point.x + 10 : point.x, point.y - 10);
+
+	const x = index === 0 ? point.x + 10 : point.x;
+	const y = point.y - 10;
+
+	ctx.fillText(String(data), x, y);
 };
