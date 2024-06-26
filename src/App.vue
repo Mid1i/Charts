@@ -8,6 +8,7 @@
     <h1 class="container__title">Задание для прохождения практики</h1>
     <p class="container__text"><span>Задача:</span> Реализовать инструмент для построения графиков, в котором при отображении тултипа точки, будут скрываться ближайшие точки.</p>
     <TechnologyList/>
+    <h2 class="container__subtitle">Пример графика:</h2>
     <Chart/>
   </div>
 </template>
@@ -37,6 +38,11 @@
         font-weight: 600;
         text-decoration: underline;
       }
+    }
+
+    &__subtitle {
+      font-size: 26px;
+      margin-bottom: 20px;
     }
   }
 </style>

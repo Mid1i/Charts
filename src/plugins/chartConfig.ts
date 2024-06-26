@@ -1,48 +1,40 @@
 import { ChartConfiguration } from "chart.js";
+import type { IDataset } from "@/interfaces/IDataset";
+
+import { getChartDataset } from "@/plugins/chartDataset";
 
 
-export const chartConfig = (data: number[], data2: number[], labels: string[]): ChartConfiguration => ({
+export const chartConfig = (datasets: IDataset[], labels: string[]): ChartConfiguration => ({
 	type: "line",
 	data: {
 		labels: labels,
-		datasets: [
-			{
-				borderColor: "rgb(10, 132, 255, 1)",
-				borderJoinStyle: "round",
-				borderWidth: 2,
-				data: data,
-				fill: true,
-				pointBackgroundColor: "rgb(10, 132, 255, .6)",
-				pointHitRadius: 20,
-				pointRadius: 6,
-				hoverBackgroundColor: "rgb(10, 132, 255, 1)",
-				hoverRadius: 10,
-				tension: 0.4
-			},
-			{
-				borderColor: "rgb(18, 183, 9)",
-				borderJoinStyle: "round",
-				borderWidth: 2,
-				data: data2,
-				fill: true,
-				pointBackgroundColor: "rgb(18, 183, 9, .6)",
-				pointHitRadius: 20,
-				pointRadius: 6,
-				hoverBackgroundColor: "rgb(18, 183, 9)",
-				hoverRadius: 10,
-				tension: 0.4
-			}
-		],
+		datasets: datasets.map(dataset => getChartDataset(dataset)),
 	},
 	options: {
-		maintainAspectRatio: true,
+		maintainAspectRatio: false,
 		responsive: true,
 		plugins: {
 			legend: {
-				display: false,
+				align: "start",
+				position: "right",
+				labels: {
+					padding: 40,
+					boxHeight: 20,
+					boxWidth: 20,
+					color: "#A9A9A9",
+					font: {
+						size: 13
+					}
+				}
 			},
 			tooltip: {
 				enabled: false
+			}
+		},
+		layout: {
+			padding: {
+				top: 20,
+				right: 10
 			}
 		},
 		scales: {

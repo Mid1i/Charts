@@ -9,6 +9,7 @@ export default defineConfig({
       "@/": "/src/",
       "@/assets": "/src/assets",
       "@/components": "/src/components",
+      "@/helpers": "/src/helpers",
       "@/plugins": "/src/plugins" 
     }
   }

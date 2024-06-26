@@ -1,6 +1,7 @@
 <script setup lang="ts">
 	import TechnologyListItem from "@/components/TechnologyListItem.vue";
 
+	
 	interface ITechnologies {
 		title: string,
 		icon: string
@@ -50,6 +51,6 @@
 		display: flex;
 		gap: 30px;
 
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 	}
 </style>
