@@ -1,3 +1,6 @@
+import { ChartDataset } from "chart.js";
+
+
 export interface IColors {
 	backgroundColor: string,
 	borderColor: string,
@@ -6,8 +9,8 @@ export interface IColors {
 };
 
 
-export interface IDataset {
+export interface IDataset<T = number> extends ChartDataset<"line", T[]> {
 	label: string,
-	data: number[],
+	data: T[],
 	colors: IColors
 };
