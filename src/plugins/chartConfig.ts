@@ -33,7 +33,7 @@ export const chartConfig = (datasets: IDataset[], labels: string[]): ChartConfig
 		},
 		layout: {
 			padding: {
-				top: 20,
+				top: 50,
 				right: 10
 			}
 		},

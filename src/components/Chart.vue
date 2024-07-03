@@ -64,7 +64,7 @@
 	.chart {
 		margin-bottom: 20px;
 
-		height: 400px;
+		height: 450px;
 		width: 950px;
 	}
 </style>
