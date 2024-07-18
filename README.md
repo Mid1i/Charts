@@ -11,4 +11,4 @@
 - SCSS
 
 ## Скриншот проекта
-<img alt="Скриншот графика" src="./src/assets/images/chart-screen.png"/>
+<img alt="Скриншот графика" src="./src/assets/images/chart-screenshot.png"/>
