@@ -11,9 +11,6 @@ export const onDrawDatasets = (chart: Chart, hoveredPoint: InteractionItem | nul
 
 	chart.config.data.datasets.forEach((dataset, datasetIndex) => {
 		const meta = chart.getDatasetMeta(datasetIndex);
-			
-		const hoveredPointIndex = hoveredPoint?.index;
-		const hoveredPointDatasetIndex = hoveredPoint?.datasetIndex;
 
 		const hoveredPointPosition = hoveredPoint ? { x: hoveredPoint?.element.x, y: hoveredPoint?.element.y } : null;
 
@@ -21,10 +18,7 @@ export const onDrawDatasets = (chart: Chart, hoveredPoint: InteractionItem | nul
 			meta.data.forEach((point, index) => {
 				const data = dataset.data[index];
 	
-				const isHoveredDataset = datasetIndex === hoveredPointDatasetIndex;
-				const isHoveredPoint = index === hoveredPointIndex && isHoveredDataset;
-	
-				if ((isEven(index) && !isNeighboringPoint(point, hoveredPointPosition)) || isHoveredPoint) onDrawPoint(ctx, String(data), point, index, isHoveredPoint);
+				if ((isEven(index) && !isNeighboringPoint(point, hoveredPointPosition)) || point.active) onDrawPoint(ctx, String(data), point, index, point.active);
 			});
 		}
 })};
